@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrera</title>
+    <script type="module" src="js/register.js"></script>
+    <script type="module" src="js/login.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li id="login-link"><a href="login.html">Logga in</a></li>
+                <li id="register-link" class="active"><a href="register.html">Skapa användare</a></li>
+                <li id="protected-link" style="display: none;"><a href="protected.html">Mina sidor</a></li>
+                <button id="logout-link">Logga ut</button>
+            </ul>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2 class="form-title">Skapa användare</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Användarnamn:</label>
+                <input type="text" id="username" name="username" class="form-input" required>
+                <div id="usernameError" style="color: red;"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password" class="form-input" required>
+                <div id="passwordError" style="color: red;"></div>
+            </div>
+            <button type="submit" class="form-button">Skapa användare</button>
+        </form>
+    </div>
+    <div id="errorMessage" style="color: red; display: none;"></div>
+    
+</body>
+</html>
