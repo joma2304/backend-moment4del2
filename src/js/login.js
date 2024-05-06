@@ -1,13 +1,5 @@
 //JS login/out
 
-// Funktion för att logga ut
-document.getElementById("logout-link").addEventListener("click", function logout() {
-    // Ta bort JWT-token från localStorage
-    localStorage.removeItem("jwtToken");
-    // Omdirigera användaren till startsidan 
-    window.location.href = "index.html"; // Vid utlogg skickas till index
-});
-
 function showProtectedPage() {
     window.location.href = "protected.html"; //Omdirigeras till den skyddade sidan
 }
@@ -27,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("protected-link").style.display = "none";
         document.getElementById("logout-link").style.display = "none";
     }
+    
     //För att logga in
     document.getElementById("loginForm").addEventListener("submit", async function(event) {
         event.preventDefault();
@@ -40,13 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
                 body: JSON.stringify({ username, password })
             });
-            const data = await response.json();
-            // Sparar JWT i localStorage
-            localStorage.setItem("jwtToken", data.token);
-            showProtectedPage(); // Visa skyddad sida efter inloggning
+            if (response.ok) {
+                const data = await response.json();
+                // Sparar JWT i localStorage
+                localStorage.setItem("jwtToken", data.token);
+                showProtectedPage(); // Visa skyddad sida efter inloggning
+            } else {
+                // Visa felmeddelande på webbplatsen om användaren inte hittades eller inloggningen misslyckades
+                const errorContainer = document.getElementById("error-message");
+                errorContainer.textContent = "Fel användarnamn eller lösenord.";
+            }
         } catch (error) {
-            console.error("Error:", error);
-            alert("Fel användarnamn eller lösenord.");
+            const errorContainer = document.getElementById("error-message");
+            errorContainer.textContent = "Ett fel inträffade. Försök igen senare.";
         }
     });
 });
