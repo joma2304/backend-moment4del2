@@ -6,7 +6,7 @@ När en användare registrerar sig och loggar in så skickas ett JWT-Token med o
 Webbplatsen är uppdelad i: 
 * Startsidan (som alla kommer åt)
 * Inloggnings-sida (som alla kommer åt)
-* Regestrerings-sida (som alla kommer åt)
+* Registrerings-sida (som alla kommer åt)
 * Mina sidor/protected (kommer endast åt ifall man är inloggad och har JWT-Token)
 
 
