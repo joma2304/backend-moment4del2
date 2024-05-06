@@ -6,11 +6,12 @@
 }
 
 body {
-    background-color: #d5d5d5;
+    background-color: #c6edb8;
     min-height: 100vh;
 }
 
 h1 {
+    margin-bottom: 3%;
     margin-top: 3%;
     text-align: center;
 }
@@ -20,7 +21,7 @@ h2 {
 }
 
 p {
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -52,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #2148b3; 
+    color: #2148b3;
 }
 
 .active {
@@ -60,7 +61,6 @@ nav ul li a:hover {
 
 }
 
-/* Formulärets container */
 .form-container {
     max-width: 900px;
     margin: 0 auto;
@@ -70,30 +70,27 @@ nav ul li a:hover {
     background-color: #f9f9f9;
 }
 
-/* Formulärets rubrik */
 .form-title {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
 }
 
-/* Formulär för inputfält */
 .form-input {
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    box-sizing: border-box; /* För att inkludera padding i bredden */
+    box-sizing: border-box;
 }
 
-/* Formulär för knappar */
 .form-button {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #007bff;
+    background-color: #d136f4;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -101,11 +98,11 @@ nav ul li a:hover {
 }
 
 .form-button:hover {
-    background-color: #0056b3;
+    background-color: #961ba9;
 }
 
 #logout-link {
-    background-color: #f44336; /* Röd färg */
+    background-color: #d136f4;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -114,5 +111,18 @@ nav ul li a:hover {
 }
 
 #logout-link:hover {
-    background-color: #d32f2f; /* Mörkare röd färg vid hover */
+    background-color: #961ba9;
+}
+
+.cont-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.p-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -9,7 +9,7 @@ document.getElementById("logout-link").addEventListener("click", function logout
 });
 
 function showProtectedPage() {
-    window.location.href = "protected.html";
+    window.location.href = "protected.html"; //Omdirigeras till den skyddade sidan
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("protected-link").style.display = "none";
         document.getElementById("logout-link").style.display = "none";
     }
-
+    //För att logga in
     document.getElementById("loginForm").addEventListener("submit", async function(event) {
         event.preventDefault();
         const username = document.getElementById("username").value;

@@ -15,9 +15,9 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         passwordError.textContent = "Ogiltigt lösenord. Lösenordet måste vara minst 6 tecken långt.";
         return;
     }
-
+    //Skapa användare
     try {
-        const response = await fetch("https://backend-moment4-del1.onrender.com/api/register", {
+        const response = await fetch("https://backend-moment4-del1.onrender.com/api/register", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,7 +41,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
 
 // Funktion för att validera användarnamn
 function validateUsername(username) {
-    return username.length >= 5; // Minst 3 tecken långt
+    return username.length >= 5; // Minst 5 tecken långt
 }
 
 // Funktion för att validera lösenord

@@ -3,8 +3,8 @@ window.onload = init;
 async function init() {
 
     const jwtToken = localStorage.getItem("jwtToken");
-    if(!jwtToken) {
-        window.location.href="login.html"
+    if(!jwtToken) { //IFall inte token finns
+        window.location.href="login.html" //Omdirigera till login sida
     }
 
 };
