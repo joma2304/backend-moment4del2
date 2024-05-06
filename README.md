@@ -9,5 +9,7 @@ Webbplatsen är uppdelad i:
 * Registrerings-sida (som alla kommer åt)
 * Mina sidor/protected (kommer endast åt ifall man är inloggad och har JWT-Token)
 
+## Länk till webbplats
+  [https://backend-moment4-del2.netlify.app/](https://backend-moment4-del2.netlify.app/) 
 
 
