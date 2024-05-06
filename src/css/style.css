@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #c6edb8;
+    background-color: #e0f0da;
     min-height: 100vh;
 }
 
@@ -129,4 +129,18 @@ nav ul li a:hover {
 
 #error-message {
     color: red;
+}
+
+.pic-container {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 90%;
+    border-radius: 999px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
