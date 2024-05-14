@@ -4,8 +4,8 @@ async function fetchUserData() {
       // Hämta JWT-token från localStorage
       const jwtToken = localStorage.getItem('jwtToken');
   
-      // Gör en GET-begäran till skyddad resurs på servern och skicka med JWT-token i Authorization-header
-      const response = await fetch('https://backend-moment4-del1.onrender.com/api/protected/user', {
+      // Gör en GET-begäran och skicka med JWT-token i Authorization-header
+      const response = await fetch('https://backend-moment4-del1.onrender.com/api/protected/username', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${jwtToken}`
@@ -18,7 +18,7 @@ async function fetchUserData() {
         const userData = await response.json();
         
         // Visa användarnamnet på sidan
-        document.getElementById('username').innerText = userData.username;
+        document.getElementById('loggedin-username').innerText = userData.username;
       } else {
         // Om fel
         console.error('Failed to fetch user data');

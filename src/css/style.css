@@ -144,3 +144,8 @@ img {
     margin-left: 3%;
     margin-right: 3%;
 }
+
+#loggedin-username {
+    text-align: center;
+    margin-bottom: 40px;
+}
