@@ -36,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (response.ok) {
                 const data = await response.json();
                 // Sparar JWT i localStorage
-                localStorage.setItem("jwtToken", data.token);
+                const jwtToken = data.response.token; // Hämta token från respons
+                // Sparar JWT-tokenet i localStorage
+                localStorage.setItem("jwtToken", jwtToken);
                 showProtectedPage(); // Visa skyddad sida efter inloggning
             } else {
                 // Visa felmeddelande på webbplatsen om användaren inte hittades eller inloggningen misslyckades
